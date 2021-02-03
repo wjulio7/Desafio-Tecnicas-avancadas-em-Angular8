@@ -29,6 +29,8 @@ export class HomeComponent implements OnInit {
 
   constructor() { }
 
+  panelOpenState = false;
+
   displayedColumns: string[] = ['position', 'name', 'cidade'];
   dataSource = ELEMENT_DATA;
 

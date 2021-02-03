@@ -1,20 +1,41 @@
-<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+<h1>Bem vindo</h1>
+<mat-accordion>
+  <!-- #docregion basic-panel -->
+  <!-- #docregion hide-toggle -->
+   
+  <!-- #enddocregion basic-panel -->
+    <mat-expansion-panel (opened)="panelOpenState = true"
+                         (closed)="panelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Clientes Avanade
+        </mat-panel-title>
+        <mat-panel-description>
+          Lista de Clientes da Avanade em Pernambuco
+        </mat-panel-description>
+      </mat-expansion-panel-header>
 
-    <ng-container matColumnDef="position">
-      <th mat-header-cell *matHeaderCellDef> No. </th>
-      <td mat-cell *matCellDef="let element"> {{element.position}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="name">
-      <th mat-header-cell *matHeaderCellDef> Clientes </th>
-      <td mat-cell *matCellDef="let element"> {{element.name}} </td>
-    </ng-container>
-  
-    <ng-container matColumnDef="cidade">
-      <th mat-header-cell *matHeaderCellDef> Cidade </th>
-      <td mat-cell *matCellDef="let element"> {{element.cidade}} </td>
-    </ng-container>
-  
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+        <ng-container matColumnDef="position">
+          <th mat-header-cell *matHeaderCellDef> No. </th>
+          <td mat-cell *matCellDef="let element"> {{element.position}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="name">
+          <th mat-header-cell *matHeaderCellDef> Clientes </th>
+          <td mat-cell *matCellDef="let element"> {{element.name}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="cidade">
+          <th mat-header-cell *matHeaderCellDef> Cidade </th>
+          <td mat-cell *matCellDef="let element"> {{element.cidade}} </td>
+        </ng-container>
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+
+
+    </mat-expansion-panel>
+  </mat-accordion>

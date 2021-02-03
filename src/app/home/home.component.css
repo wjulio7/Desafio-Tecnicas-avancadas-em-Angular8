@@ -2,3 +2,7 @@ table {
     width: 100%;
   }
   
+  mat-expansion-panel{
+    background-color: #ff5800;
+    margin-bottom: 20px;
+  }
